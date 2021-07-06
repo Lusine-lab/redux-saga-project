@@ -9,10 +9,6 @@ const saga = sagaMiddleware();
 const middleware = [saga, logger];
 
 const store = createStore(rootReducer, {}, applyMiddleware(...middleware));
-try {
-  saga.run(watcherSaga);
-} catch (error) {
-  console.log("sssssssssssssss", error);
-}
+saga.run(watcherSaga);
 
 export default store;

@@ -1,6 +1,6 @@
 import { call, put } from "redux-saga/effects";
-import {setSingleUser, setUsers} from "../actions";
-import API, {addUser, getSingleUser, getUserList} from "../../api.js";
+import { setSingleUser, setUsers } from "../actions";
+import { addUser, getSingleUser, getUserList } from "../../api.js";
 
 export function* getUserSaga(action) {
   try {
@@ -24,8 +24,7 @@ export function* getSingleUserSaga(action) {
 
 export function* createUserSaga(action) {
   try {
-
-   /* const response =*/ yield call(addUser, action.user);
+    /* const response =*/ yield call(addUser, action.user);
     //
     //
     // const data = response.data;
@@ -34,7 +33,6 @@ export function* createUserSaga(action) {
     const response = yield call(getUserList);
     const data = response.data;
     yield put(setUsers(data));
-
   } catch (error) {
     console.log("getUserSaga", error);
   }

@@ -13,7 +13,7 @@ export const getUserList = () => {
 
 export const getSingleUser = (id) => {
   return api({
-    url: "users/" + id ,
+    url: "users/" + id,
     method: "get",
   });
 };
@@ -22,9 +22,6 @@ export const addUser = (user) => {
   return api({
     url: "users",
     method: "post",
-    data : user
+    data: user,
   });
 };
-
-// const api = new API();
-// export default api;

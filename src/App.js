@@ -9,21 +9,21 @@ import UserDetails from "./components/UserDetails";
 function App() {
   return (
     <div className="App">
-        <Router>
-            <Header />
-            <Switch>
-                <Route exact path="/">
-                    <Users />
-                </Route>
-                <Route exact path="/add">
-                    <AddUser />
-                </Route>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Users />
+          </Route>
+          <Route path="/add">
+            <AddUser />
+          </Route>
 
-                <Route exact path="/users/:userId">
-                    <UserDetails />
-                </Route>
-            </Switch>
-        </Router>
+          <Route path="/users/:userId">
+            <UserDetails />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -6,7 +6,7 @@ export const getUsers = () => ({
 
 export const getSingleUser = (id) => ({
   type: CONS.user.GET_USERS_SINGLE,
-  id : id
+  id: id,
 });
 
 export const setUsers = (users) => ({
@@ -15,7 +15,7 @@ export const setUsers = (users) => ({
 });
 
 export const setSingleUser = (user) => ({
-  type: CONS.user.SET_USERS,
+  type: CONS.user.SET_SINGLE_USER,
   user,
 });
 

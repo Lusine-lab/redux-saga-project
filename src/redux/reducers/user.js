@@ -7,7 +7,6 @@ const initialState = {
 const userReducers = (state = initialState, action) => {
   switch (action.type) {
     case CONST.user.SET_USERS: {
-
       return {
         ...state,
         users: action.users,
@@ -15,7 +14,6 @@ const userReducers = (state = initialState, action) => {
     }
 
     case CONST.user.SET_SINGLE_USER: {
-
       return {
         ...state,
         currentUser: action.user,
