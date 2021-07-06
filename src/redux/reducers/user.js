@@ -19,6 +19,12 @@ const userReducers = (state = initialState, action) => {
         currentUser: action.user,
       };
     }
+    case CONST.user.SET_CURRENT_USER_POSTS: {
+      return {
+        ...state,
+        currentUserPosts: action.posts,
+      };
+    }
 
     default:
       return state;

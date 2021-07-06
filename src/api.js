@@ -25,3 +25,14 @@ export const addUser = (user) => {
     data: user,
   });
 };
+
+export const getCurrentUserPosts = (userId) => {
+  return api({
+    // url: `users/?${userId}`,
+    url: "posts",
+    params: {
+      userId: userId,
+    },
+    method: "get",
+  });
+};
