@@ -7,11 +7,18 @@ const initialState = {
 const userReducers = (state = initialState, action) => {
   switch (action.type) {
     case CONST.user.SET_USERS: {
-      console.log("action", action);
 
       return {
         ...state,
         users: action.users,
+      };
+    }
+
+    case CONST.user.SET_SINGLE_USER: {
+
+      return {
+        ...state,
+        currentUser: action.user,
       };
     }
 

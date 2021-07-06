@@ -11,6 +11,13 @@ export const getUserList = () => {
   });
 };
 
+export const getSingleUser = (id) => {
+  return api({
+    url: "users/" + id ,
+    method: "get",
+  });
+};
+
 export const addUser = (user) => {
   return api({
     url: "users",
